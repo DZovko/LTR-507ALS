@@ -1,15 +1,16 @@
-# Digital Light & Proximity Sensor LTR-507 
+# Digital Light & Proximity Sensor LTR-507
 
 ## Product Overview
 
-![Product Image](https://github.com/user-attachments/assets/a7c0acc0-3331-4894-9643-fd69a40bc911) 
+![Product Image](https://github.com/user-attachments/assets/a7c0acc0-3331-4894-9643-fd69a40bc911)
 **SKU:** 333063  
 [Product Page](https://soldered.com/product/digital-light-proximity-sensor-ltr-507-breakout/)  
-[Soldered Page](https://soldered.com/)  
+[Soldered Page](https://soldered.com/)
 
 The **LTR-507** is a digital light and proximity sensor designed for accurate ambient light measurement and object proximity detection. It integrates advanced optical filtering and signal processing to ensure reliable performance across various lighting conditions.
 
 ### Features
+
 - Dual-function sensor for ambient light and proximity measurement
 - High sensitivity and low power consumption
 - I2C communication interface
@@ -21,37 +22,53 @@ The **LTR-507** is a digital light and proximity sensor designed for accurate am
 
 The **LTR-507** sensor operates using two main detection principles:
 
-1. **Ambient Light Sensing:** Detects visible and infrared light to measure environmental brightness. Useful for automatic screen brightness control and energy-saving applications.
-2. **Proximity Sensing:** Emits infrared light and measures the reflected signal to determine object distance. Commonly used in touchless interfaces and object detection.
+1. **Ambient Light Sensing:**
 
-![Sensor Functionality](./images/how-it-works.png)
+- The LTR-507 has two photodiodes: one sensitive to visible light and the other to infrared (IR) light.
 
+- By measuring the intensity of both visible and IR light, it can approximate human eye perception and filter out unwanted IR noise.
 
+- The ambient light sensing function provides a digital output proportional to the ambient light level, which is useful for applications like automatic screen brightness adjustment.
+
+2. **Proximity Sensing:**
+
+- The sensor includes an infrared LED and a proximity photodiode.
+
+- Emits infrared light and measures the reflected signal to determine object distance. Commonly used in touchless interfaces and object detection.
+
+- The reflected IR light is detected by the proximity photodiode.
 
 ---
 
 ## Arduino: Getting Started
 
 ### Prerequisites
+
 - **Arduino IDE** ([Download](https://www.arduino.cc/en/software))
 - **LTR-507 Arduino Library** ([GitHub](https://github.com/SolderedElectronics/Soldered-Digital-Light-Sensor-Arduino-Library))
 - **Dasduino Board Definitions** ([GitHub](https://github.com/SolderedElectronics/Dasduino-Board-Definitions-for-Arduino-IDE))
 
 ### Wiring Guide
+
 Connect the sensor to an Arduino-compatible board as follows:
 
 | Sensor Pin | Arduino Pin |
-|------------|------------|
-| VCC        | 3.3V / 5V  |
-| GND        | GND        |
-| SDA        | A4 (SDA)   |
-| SCL        | A5 (SCL)   |
+| ---------- | ----------- |
+| VCC        | 3.3V / 5V   |
+| GND        | GND         |
+| SDA        | A4 (SDA)    |
+| SCL        | A5 (SCL)    |
 
 ### Installing the Library
-1. Open **Arduino IDE**.
-2. Go to **Sketch** > **Include Library** > **Manage Libraries**.
-3. Search for **LTR-507 Light and Proximity Sensor**.
-4. Click **Install**.
+
+1. Download our LTR-507 Arduino Library ([GitHub](https://github.com/SolderedElectronics/Soldered-Digital-Light-Sensor-Arduino-Library)) as a ZIP.
+   ![Image](https://github.com/user-attachments/assets/67136570-a2f9-49fb-8255-278899bf721c)
+2. Open **Arduino IDE**.
+3. Go to **Sketch** > **Include Library** > **Add .ZIP Library**.
+   ![Image](https://github.com/user-attachments/assets/fa5b396f-fc7b-48b6-a862-4dfd5d8ac04b)
+
+4. Go to **Sketch** > **Include Library** > **Select our LTR-507 Arduino Library**
+   ![Image](https://github.com/user-attachments/assets/c4fbc51c-af17-4fe7-b212-f7b0a8b33d3c)
 
 ---
 
@@ -80,6 +97,7 @@ void loop() {
 ```
 
 ### Running the Code
+
 1. Connect your sensor and board as per the wiring guide.
 2. Upload the above code to your **Dasduino**.
 3. Open the **Serial Monitor** to view real-time readings.
@@ -89,6 +107,7 @@ void loop() {
 ---
 
 ## Additional Resources
+
 - [Dasduino Board Definitions](https://github.com/SolderedElectronics/Dasduino-Board-Definitions-for-Arduino-IDE)
 - [LTR-507 Arduino Library](https://github.com/SolderedElectronics/Soldered-Digital-Light-Sensor-Arduino-Library)
 - [Example Projects](https://tested-amusement.surge.sh/)
