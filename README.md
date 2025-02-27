@@ -2,7 +2,7 @@
 
 ## Product Overview
 
-![Product Image]("https://github.com/DZovko/LTR-507ALS/blob/bba85d488580a6894047ec7206cbff7dae28a06e/LTR-507.png")  
+![Product Image]("https://github.com/DZovko/LTR-507ALS/blob/0647668b353c34f37fcc419df64b41ef8f1241f0/LTR-507.jpg")  
 **SKU:** 333063  
 [Product Page](https://soldered.com/product/digital-light-proximity-sensor-ltr-507-breakout/)  
 [Soldered Page](https://soldered.com/)  
