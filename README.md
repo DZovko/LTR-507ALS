@@ -116,7 +116,8 @@ void loop() {
 
      // Wait a bit until the next reading so output isn't too fast
     delay(1000);
-}```
+}
+```
 
 ### Running the Code
 
