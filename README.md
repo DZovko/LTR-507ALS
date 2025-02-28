@@ -116,7 +116,7 @@ void loop() {
 
      // Wait a bit until the next reading so output isn't too fast
     delay(1000);
-}```
+}````
 
 ### Running the Code
 
@@ -134,4 +134,4 @@ void loop() {
 - [LTR-507 Arduino Library](https://github.com/SolderedElectronics/Soldered-Digital-Light-Sensor-Arduino-Library)
 - [Example Projects](https://tested-amusement.surge.sh/)
 
-````
+
