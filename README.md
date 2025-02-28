@@ -50,7 +50,7 @@ The **LTR-507** sensor operates using two main detection principles:
 
 ### Wiring Guide
 
-Connect the sensor to an Dasduino board as follows:
+Connect the sensor to an Arduino-compatible boards as follows:
 
 | Sensor Pin | Arduino Pin |
 | ---------- | ----------- |
@@ -127,12 +127,7 @@ void loop() {
 
 ![Serial Monitor Output](https://github.com/user-attachments/assets/289673f1-2b42-44b1-bcfa-66608f088347)
 
----
 
-## Additional Resources
 
-- [Dasduino Board Definitions](https://github.com/SolderedElectronics/Dasduino-Board-Definitions-for-Arduino-IDE)
-- [LTR-507 Arduino Library](https://github.com/SolderedElectronics/Soldered-Digital-Light-Sensor-Arduino-Library)
-- [Example Projects](https://tested-amusement.surge.sh/)
 
 
