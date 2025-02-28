@@ -50,7 +50,7 @@ The **LTR-507** sensor operates using two main detection principles:
 
 ### Wiring Guide
 
-Connect the sensor to an Arduino-compatible board as follows:
+Connect the sensor to an Dasduino board as follows:
 
 | Sensor Pin | Arduino Pin |
 | ---------- | ----------- |
@@ -76,33 +76,55 @@ Connect the sensor to an Arduino-compatible board as follows:
 
 Here’s a simple example to read light and proximity values from the sensor:
 
-```cpp
-#include <Wire.h>
-#include <LTR507.h>
+````cpp
+//include our library for LTR-507
+#include <LTR-507-Light-And-Proximity-Sensor-SOLDERED.h>
 
+// Create sensor object
 LTR507 sensor;
 
 void setup() {
-    Serial.begin(115200);
-    sensor.begin();
+
+
+  Serial.begin(9600);
+
+  // Initialize the sensor!
+    sensor.init();
 }
 
+// the loop function runs over and over again forever
 void loop() {
-    Serial.print("Ambient Light: ");
-    Serial.print(sensor.readAmbientLight());
-    Serial.print(" lx, Proximity: ");
-    Serial.println(sensor.readProximity());
+  // Make local variables for reading the light and proximity value
+    uint16_t lightReading;
+    uint16_t proximityReading;
+
+    // Make reading!
+    lightReading = sensor.getLightIntensity();
+    proximityReading = sensor.getProximity();
+
+    // Print the light reading
+    Serial.print("Light sensor reading: ");
+    Serial.println(lightReading);
+
+    // Wait a bit until the next reading so output isn't too fast
     delay(1000);
-}
-```
+
+
+    // Print proximity reading
+    Serial.print("Proximity sensor reading: ");
+    Serial.println(proximityReading);
+
+     // Wait a bit until the next reading so output isn't too fast
+    delay(1000);
+}```
 
 ### Running the Code
 
-1. Connect your sensor and board as per the wiring guide.
+1. Connect your sensor and board as per the wiring guide or using easy c.
 2. Upload the above code to your **Dasduino**.
 3. Open the **Serial Monitor** to view real-time readings.
 
-![Serial Monitor Output](./images/serial-monitor.png)
+![Serial Monitor Output](https://github.com/user-attachments/assets/289673f1-2b42-44b1-bcfa-66608f088347)
 
 ---
 
@@ -111,3 +133,5 @@ void loop() {
 - [Dasduino Board Definitions](https://github.com/SolderedElectronics/Dasduino-Board-Definitions-for-Arduino-IDE)
 - [LTR-507 Arduino Library](https://github.com/SolderedElectronics/Soldered-Digital-Light-Sensor-Arduino-Library)
 - [Example Projects](https://tested-amusement.surge.sh/)
+
+````
