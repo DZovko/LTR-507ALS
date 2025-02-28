@@ -76,7 +76,7 @@ Connect the sensor to an Dasduino board as follows:
 
 Here’s a simple example to read light and proximity values from the sensor:
 
-````cpp
+```cpp
 //include our library for LTR-507
 #include <LTR-507-Light-And-Proximity-Sensor-SOLDERED.h>
 
@@ -116,7 +116,7 @@ void loop() {
 
      // Wait a bit until the next reading so output isn't too fast
     delay(1000);
-}````
+}```
 
 ### Running the Code
 
